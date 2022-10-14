@@ -1,0 +1,26 @@
+Source: node-stream-consume
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-should <!nocheck>
+ , node-through2 <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-stream-consume
+Vcs-Git: https://salsa.debian.org/js-team/node-stream-consume.git
+Homepage: https://github.com/aroneous/stream-consume
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-stream-consume
+Architecture: all
+Depends: ${misc:Depends}
+ , nodejs
+Description: consume a stream to ensure it keeps flowing
+ stream-consume is a node module that ensures a Readable stream continues
+ flowing if it's not piped to another destination.
+ .
+ Node.js is an event-based server-side JavaScript engine.
